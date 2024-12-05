@@ -12,8 +12,8 @@ public class Conos {
     
     //Constructor
     public Conos(){
-    ruedas = new CANSparkMax(8, MotorType.kBrushless);
-    angulo = new CANSparkMax(5,MotorType.kBrushless);
+    ruedas = new CANSparkMax(5, MotorType.kBrushless);
+    angulo = new CANSparkMax(6,MotorType.kBrushless);
     }
 
     public void comer(double right_trigger_axis, double left_trigger_axis){

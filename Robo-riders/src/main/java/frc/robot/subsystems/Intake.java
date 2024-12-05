@@ -13,7 +13,7 @@ static TalonSRX IntakeRight;
 double OFF;
 //Constructor
 public Intake() {
-    IntakeLeft = new TalonSRX(6);
+    IntakeLeft = new TalonSRX(8);
     IntakeRight = new TalonSRX(7);
 }
 
