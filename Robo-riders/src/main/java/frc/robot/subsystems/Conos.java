@@ -19,21 +19,28 @@ public class Conos {
     public void comer(double right_trigger_axis, double left_trigger_axis){
 
         if (left_trigger_axis > 0){ //comer
-            ruedas.set(left_trigger_axis);
+            ruedas.set(0.1);
         }
         else if (right_trigger_axis > 0){ //escupir
-            ruedas.set(-left_trigger_axis);
+            ruedas.set(-0.1);
+        }
+
+        else  {
+            ruedas.set(0);
         }
     }
 
     public void mover(double right_yJoyStick_Axis){
 
         if (right_yJoyStick_Axis > 0){ //arriba
-            angulo.set(0.5);
+            angulo.set(0.9);
         }
 
         else if (right_yJoyStick_Axis < 0){ //abajo
-            angulo.set(-0.5);            
+            angulo.set(-0.9);            
+        }
+        else {
+            angulo.set(0);                        
         }
     }
 

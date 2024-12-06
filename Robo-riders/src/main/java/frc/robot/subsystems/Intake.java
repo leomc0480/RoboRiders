@@ -25,14 +25,23 @@ public void stop(){
 }
 
 public void comer(double left_trigger_axis, double right_trigger_axis){
+
     if (left_trigger_axis > 0) {
-    IntakeLeft.set(ControlMode.PercentOutput,-left_trigger_axis); //negativo para que coma si no irian igual los motores
-    IntakeRight.set(ControlMode.PercentOutput,left_trigger_axis);
+    IntakeLeft.set(ControlMode.PercentOutput,left_trigger_axis); //negativo para que coma si no irian igual los motores
+    IntakeRight.set(ControlMode.PercentOutput,-left_trigger_axis);
         }
     else if (right_trigger_axis > 0){
-    IntakeLeft.set(ControlMode.PercentOutput,left_trigger_axis); //negativo para que coma si no irian igual los motores
-    IntakeRight.set(ControlMode.PercentOutput,-left_trigger_axis);        
+    IntakeLeft.set(ControlMode.PercentOutput,-right_trigger_axis); //negativo para que coma si no irian igual los motores
+    IntakeRight.set(ControlMode.PercentOutput,+right_trigger_axis);        
         }
+
+    else {
+    OFF = 0;
+
+    IntakeLeft.set(ControlMode.PercentOutput,OFF);
+    IntakeRight.set(ControlMode.PercentOutput,OFF);
+    }
     }
 
+ 
 }

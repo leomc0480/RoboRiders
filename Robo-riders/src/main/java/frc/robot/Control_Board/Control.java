@@ -47,7 +47,7 @@ public class Control{
         return yValue;
     }
 
-    public double right_trigger_axes(){
+    public double right_trigger_axis(){
         double RAxisValue = driver.getRightTriggerAxis();
         if(Math.abs(RAxisValue)<tolerance){
             RAxisValue = 0;

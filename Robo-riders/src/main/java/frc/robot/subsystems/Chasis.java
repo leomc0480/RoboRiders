@@ -22,7 +22,7 @@ public class Chasis {
     public Chasis(){
         Motor1mDriveLeft1 = new TalonSRX(1);
         Motor1mDriveLeft2 = new TalonSRX(2);
-        Motor1mDrive1Right1 = new TalonSRX(3);
+        Motor1mDrive1Right1 = new TalonSRX(3);//esto es lo que cambir este estaba en 4 y el de abajo en 3
         Motor1mDrive1Right2 = new TalonSRX(4);
         
 
@@ -38,14 +38,15 @@ public class Chasis {
         Motor1mDriveLeft1.set(ControlMode.PercentOutput,speed);
         Motor1mDriveLeft2.set(ControlMode.PercentOutput,speed);
     }   
-    public void drive(double xInput , double yInput){
+    public void drive(double yInput , double xInput){
+        //yInput es el nuevo xInput y vicebersa.
         if(yInput < 0){
-            rightspeed = yInput+xInput;
-            leftspeed = yInput-xInput;
-        }
-        else {
             rightspeed = yInput-xInput;
             leftspeed = yInput+xInput;
+        }
+        else {
+            rightspeed = yInput+xInput;
+            leftspeed = yInput-xInput;
         }
         realLeftSpeed=leftspeed;
         realRightSpeed=rightspeed;

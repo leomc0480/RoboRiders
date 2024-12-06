@@ -143,7 +143,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
 mChasis.drive(mControl.right_X_stick_driver(), mControl.left_Y_stick_driver());
-mIntake.comer(mControl.left_trigger_axis(), mControl.right_trigger_axes());
+mIntake.comer(mControl.left_trigger_axis(), mControl.right_trigger_axis());
 mConos.comer(mControl.right_trigger_axis_mecanismos(), mControl.left_trigger_axis_mecanismos());
 mConos.mover(mControl.right_yJoyStick_Axis_mecanismos());
  }
